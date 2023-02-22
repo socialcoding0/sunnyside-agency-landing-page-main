@@ -40,6 +40,7 @@ body {
 main {
     width: 100%;
     height: auto;
+    user-select: none;
 }
 
 
@@ -131,6 +132,7 @@ nav {
 .hamburger-icon {
     display: none;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .header-caption {
@@ -376,6 +378,7 @@ footer ul li a {
     margin-top: auto;
     display: flex;
     gap: 2rem;
+    cursor: pointer;
 
 }
 
@@ -399,7 +402,7 @@ footer ul li a {
         top: 80px;
         right: 35px;
         flex-direction: column;
-        width: 320px;
+        min-width: 250px;
         padding: 1.5rem;
         padding-top: 4rem;
         background-color: var(--White);
@@ -407,6 +410,19 @@ footer ul li a {
         display: none;
         overflow: hidden;
     }
+
+    .menu::after {
+        content: "";
+        width: 100%;
+        height: 30px;
+        background-color: #3DBEFF;
+        top: 0;
+        left: -12px;
+        position: absolute;
+        transform: skewX(-40deg);
+    }
+
+
 
     .menu li a {
         color: var(--Darkgrayishblue);
@@ -428,15 +444,7 @@ footer ul li a {
         display: block;
     }
 
-    .border {
-        width: 330px;
-        height: 30px;
-        background-color: #3DBEFF;
-        top: 0;
-        left: -20px;
-        position: absolute;
-        transform: skewX(-40deg);
-    }
+
 
     .base-container {
         height: auto;
